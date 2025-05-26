@@ -1,0 +1,352 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    background-color: rgb(39, 37, 37);
+    color: #fff;
+    padding: 50px;
+    height: 450px;
+    margin: 0;
+    text-align: center;
+}
+
+.navbar {
+    background-color: rgb(39, 37, 37);
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 75px;
+    padding-left: 75px;
+}
+
+.navbar a {
+    position: relative; 
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    font-size: 16px;
+}
+
+.navbar a:hover, .dropdown:hover {
+    background-color: #555;
+}
+
+/* drop styles */
+.dropbtn {
+    background-color: rgb(39, 37, 37);
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(39, 37, 37);
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #555;
+}
+
+section {
+    display: none; /* for hiding the sections initially */
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#acasa {
+    display: block;
+}
+
+#header-acasa {
+    background-image: url('/static/images/cer1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+#header-servicii {
+    display: none;
+    background-image: url('/static/images/servicii2.jpg' );
+    background-size: cover;
+    background-position: center;
+    color: black;
+}
+
+#header-echipa {
+    display: none;
+    background-image: url('/static/images/ptechipa.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+#header-contact {
+    display: none;
+    background-image: url( '/static/images/contact.jpg' );
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    background-color: rgb(39, 37, 37);
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveUpDown {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(20px); }
+    100% { transform: translateY(0); }
+}
+
+
+.cont_nota3, .cont_nota2, .cont_nota {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: slideIn 2s forwards, moveUpDown 5s linear infinite; 
+}
+
+.note2, .note {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 15px;
+    width: 30%; 
+    margin: 20px;
+    box-sizing: border-box; 
+    text-align: justify;
+    animation: slideIn 2s forwards, moveUpDown 5s linear infinite;
+}
+
+
+
+.note p {
+    margin: 0;
+}
+
+@media (max-width: 800px) {
+    .navbar .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .navbar a, .dropbtn {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        width: 100%;
+    }
+}
+
+
+#submit{
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(39, 37, 37);
+    color: #0bd0df;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+}
+
+#submit:hover {
+    background-color: gray;
+}
+
+
+.feedbackForm {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#feedback {
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    border-radius: 15px;
+    border: none;
+    background-color: lightblue;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    box-shadow: 0 4px 10px lightblue; /* Subtle shadow */
+}
+
+#servicii_container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: lightblue;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px lightblue;
+    text-align: center;
+    position: relative; /* Add this */
+    /*overflow: visible; */
+}
+.services-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between buttons */
+}
+
+#butonform {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: lightblue;
+    box-shadow: 0 4px 10px lightblue;
+    color: rgb(39, 37, 37);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+
+.services-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+
+.service-btn {
+    background-color: rgb(39, 37, 37);
+    color: white;
+    padding: 15px 25px;
+    margin: 0; /* Remove margin */
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    width: 100%;
+    text-align: left;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.service-btn:hover {
+    background-color: #555;
+    
+}
+
+.service-dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 0 0 15px 15px; /* Matches container's border radius */
+    box-shadow: 0 4px 10px lightblue;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+
+/* Adăugați această clasă pentru a menține meniul deschis când este activ */
+.service-dropdown-content.active {
+    display: block;
+    max-height: 1000px; /* Allow sufficient height for content */
+}
+
+
+.service-dropdown-content p {
+    margin: 15px;
+    text-align: justify;
+}
+
+.service-dropdown-content ol {
+    font-size: 80%;
+    margin-left: 40px; /* Ajustează indentarea listei */
+    text-align:left;
+}
+
+.noutati-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.noutati-button {
+    background-color: #393737;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.noutati-button:hover {
+    background-color: #555;
+}

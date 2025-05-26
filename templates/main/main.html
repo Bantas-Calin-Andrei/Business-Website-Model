@@ -1,0 +1,242 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servexpert SRL - Pagină Principală</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo.jpg' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> <!-- Include fișierul CSS extern -->
+</head>
+<body>
+    <div class="noutati-button-container">
+        <a href="{% url 'blog' %}" class="noutati-button">Noutati</a>
+    </div>
+
+    <header id="header-acasa">
+        <h1>Servexpert SRL</h1>
+        <p style="font-size: 22px;">Servicii profesionale pentru contabilitate și consultanță pentru proiecte europene</p>
+    </header>
+
+    <header id="header-servicii">
+        <h1>Servicii</h1>
+    </header>
+
+    <header id="header-echipa">
+        <h1>Despre noi</h1>
+    </header>
+
+    <header id="header-contact">
+        <h1>Contact</h1>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" onclick="showSection('acasa')" style = "font-size: 25px;">Acasă</a>
+            <a href="#" onclick="showSection('servicii')" style = "font-size: 25px;">Servicii</a>
+            <a href="#" onclick="showSection('echipa')" style = "font-size: 25px;">Echipă</a>
+            <a href="#" onclick="showSection('contact')" style = "font-size: 25px;">Contact</a>
+        </div>
+    </nav>
+
+    <section id="acasa"> 
+        <h2 style="text-align: center;">Bun venit la Servexpert SRL!</h2>
+        <div class="cont_nota2">
+            <div class="note2">
+                <p>Profesionalism, încredere și siguranță pentru afaceri de succes.</p>
+            </div>
+        </div>
+        <div class="cont_nota">
+            <div class="note">
+                <p>Suntem o echipă dedicată ce oferă soluții profesionale în domeniile contabilității, consultanței pentru obținerea de fonduri europene și a consultanței fiscale. Ne concentrăm pe oferirea de servicii specializate și personalizate pentru companii mici și mari, ajutându-vă să vă concentrați pe creșterea afacerii dumneavoastră într-un mediu de afaceri din ce în ce mai complex.</p>
+            </div>
+        </div>
+        <div class="cont_nota3">
+            <div class="note2">
+                <p>Colaboram cu zeci de clienti din toate domeniile.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicii">
+        <div class="container" id = "servicii_container">
+            <h2>Oferta noastră cuprinde:</h2>
+            
+        
+        <div class="services-wrapper">
+            <button class="service-btn">Contabilitate</button>
+            <div class="service-dropdown-content">
+                <p>• Consiliere privind întocmirea documentelor contabile primare;</p>
+                <p>• Înregistrarea documentelor primare în conformitate cu legislația contabilă în vigoare;</p>
+                <p>• Întocmirea balanței de verificare lunare/trimestriale;</p>
+                <p>• Întocmirea jurnalelor de cumpărare/vânzare, registrului jurnal, registrului inventar și cartea mare;</p>
+                <p>• Întocmirea/depunerea declarațiilor/raportărilor lunare, trimestriale și anuale către organele fiscale;</p>
+                <p>• Stabilirea obligațiilor de plată lunare/trimestriale, întocmirea documentelor de plată;</p>
+                <p>• Întocmirea/certificarea/depunerea bilanțului contabil;</p>
+                <p>• Reglarea/urmărirea fișei pe plătitor;</p>
+                <p>• Obținerea de certificate de atestare fiscală;</p>
+                <p>• Refacerea evidenței financiar-contabile;</p>
+                <p>• Întocmirea de rapoarte tip solicitate suplimentar de conducerea societății;</p>
+                <p>• Informarea frecventă cu privire la reglementările contabile și fiscale aprobate de Ministerul Finanțelor;</p>
+                <p>• Asistență și reprezentare în fața organelor de control fiscal (inspecții fiscale);</p>
+                <p>• Consultanță privind legislația financiar-contabilă, strict legată de obiectul de activitate:</p>
+                <ol>
+                <li>Implementarea sau configurarea soft-ului contabil pentru eficientizarea activității contabile;</li>
+                <li>Optimizarea fluxului documentelor contabile primare;</li>
+                <li>Managementul de gestionare a activelor;</li>
+                <li>Reconcilierea conturilor din balanța contabilă;</li>
+                <li>Analiza situației financiare a companiei și întocmirea de rapoarte personalizate pentru a preveni eventuale riscuri contabile și fiscale;</li>
+                <li>Elaborarea documentației necesare pentru obținerea de credite;</li>
+                <li>Instruirea personalului departamentului Contabilitate.</li>
+                </ol>
+                </ol>  
+            </div>
+            
+            <button class="service-btn">Consultanță fiscală și asistență la control</button>
+            <div class="service-dropdown-content">
+                <p>• Consultanță cu privire la reglementările fiscale și contabile aplicabile companiei dumneavoastră și tranzacțiilor specifice;</p>
+                <p>• Asistență pe parcursul controalelor fiscale, inclusiv la cele pentru recuperare de TVA;</p>
+                <p>• Consiliere atât în faza de contestații de rapoarte de inspecție fiscală (decizii de impunere) cât și în faza de reprezentare a clienților implicați în litigii fiscale, beneficiind și de asistență juridică din partea casei de avocatură colaboratoare;</p>
+                <p>• Consultanță în interpretarea și înțelegerea situațiilor financiare;</p>
+                <p>• Consultanță privind evitarea dublei impuneri;</p>
+                <p>• Informarea periodică a clienților asupra modificărilor din legislația financiar-contabilă, fiscală precum și din legislația muncii;</p>
+                <p>• Consultanță în procesul de achiziție și vânzare;</p>
+            </div>
+            
+            <button class="service-btn">Asistență în proiecte europene</button>
+            <div class="service-dropdown-content">
+                <p>• Identificarea surselor de finanțare:</p>
+                <ol>
+                    <li>Urmărim oportunitățile de finanțare interne și externe; </li>
+                    <li>Identificăm sursele de finanțare și stabilim eligibilitatea beneficiarului și a ideii de proiect; </li>
+                    <li>Stabilim eligibilitatea solicitantului și a proiectului; </li>
+                    <li>Propunem soluții optime prin care să se poată obține maximul de sprijin financiar nerambursabil. </li>
+                </ol>
+                <p>• Consultanță și asistență în accesarea fondurilor nerambursabile/Servicii consultanță fonduri europene: </p>
+                <ol>
+                    <li>Elaborarea planului de afaceri; </li>
+                    <li>Realizarea analizei economico-financiare; </li>
+                    <li>Asistență în completarea Cererii de finanțare;</li>
+                    <li>Asistență în etapa de pre-contractare; </li>
+                    <li>Completarea anexelor Cererii de finanțare; </li>
+                    <li>Asigurarea managementului proiectului de finanțare și asistarea beneficiarului în realizarea investiției prin intermediul fondurilor europene nerambursabile; </li>
+                    <li>Asigurarea serviciilor de consultanță fonduri europene la cel mai ridicat nivel. </li>
+                </ol>
+                <p>• Consultanță implementare proiecte și asistență: </p>
+                <ol>
+                    <li>Asistență tehnică în derularea procedurilor de achiziție publică; </li>
+                    <li>Întocmirea rapoartelor tehnice trimestriale și finale; </li>
+                    <li>Întocmirea rapoartelor financiare trimestriale și finale; </li>
+                    <li>Consultanță și asistență la întocmirea cererilor de prefinanțare/rambursare/plată. </li>
+                </ol>
+            </div>
+
+            <button class="service-btn">Salarizare si HR</button>
+            <div class="service-dropdown-content">
+                <p>Externalizarea completă a serviciilor de salarizare</p>
+                <p>Întocmirea și depunerea declarațiilor fiscale salariale</p>
+                <p>Întocmirea și depunerea declarațiilor fiscale ale detașaților</p>
+                <p>Revizuirea calculelor salariale</p>
+                <p>Servicii acces platforma HR pentru salariații clientului</p>
+                <p>Gestionarea dosarelor de personal</p>
+                <p>Întocmirea contractelor individuale de muncă</p>
+                <p>Întocmirea actelor adiționale</p>
+                <p>Întocmirea deciziilor de încetare, suspendare și / sau reluare activitate</p>
+                <p>Întocmirea, actualizarea și transmiterea Registrului General de Evidență a Salariaților (REGES)</p>
+                <p>Întocmirea tuturor tipurilor de adeverințe</p>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+    
+
+
+    </section>
+
+    <section id="echipa">
+        <div style = "width: 80%; align: center; margin: auto; text-align: left;">
+            <p> La Servexpert, precizia și angajamentul sunt piloni ai succesului dumneavoastră.</p>
+            <p> De 25 de ani, Bantas Mariana, expert contabil și consultant fiscal, fondatorul și coordonatorul principal al echipei noastre, aduce în fiecare proiect o experiență profundă și o viziune strategică acumulată în domeniul contabilității.
+            Seriozitatea, rigurozitatea și angajamentul până la final sunt calitățile care definesc abordarea sa profesională, iar implicarea activă în fiecare caz particular garantează rezultate eficiente și adaptate nevoilor dumneavoastră.</p>
+            <p> In ceea ce priveste asistenta in obtinerea fondurilor europene, oferim consultanta din anul 2006, am scris si implementat proiecte cu finantare din fonduri ale Uniunii Europene si ale Guvernului Romaniei pentru industrie, cercetare, stimularea dezvoltarii IMM-urilor si ale microintreprinderilor din mediul urban si rural. Am scris si implementat proiecte prin programele: POSCCE, POSDRU, POC, PCIDIF, POR .</p>
+            <p> La noi, relația cu clientul nu este doar o formalitate, ci o parteneriat durabil, bazat pe încredere și transparență. Alegeți experții care înțeleg nevoile dumneavoastră și le transformă în soluții practice, cu un răspuns rapid și un angajament permanent.
+                Contactați-ne acum pentru o consultare și descoperiți cum putem simplifica și optimiza operațiunile dumneavoastră financiare!</p>
+            <p> Soluții personalizate și sfaturi valoroase sunt promisiunile noastre pentru clienții noștri. Fie că vă aflați la început de afacere sau administrați o companie consolidată, echipa noastră oferă suport integral:</p>
+            <ul>    
+                <li>Contabilitate completă și fiscală</li>
+                <li>Optimizare a taxelor</li>
+                <li>Consultanță financiară strategică</li>
+                <li>Asistență pentru proiecte finanțate din fonduri europene</li>
+            <ul>
+           
+        </div>
+    </section>
+
+    <section id="contact" {% if active_section == 'contact' %}style="display: block;"{% endif %}>
+        <div class="contact-container">
+            <div class="contact-map" style="float:right;">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2847.8363412247973!2d25.932716958650598!3d44.45702699069602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDTCsDI3JzIyLjciTiAyNcKwNTYnMTEuMyJF!5e0!3m2!1sro!2sro!4v1713127673677!5m2!1sro!2sro" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <div class="contact-info">
+                <p>Pentru mai multe informații, ne puteți contacta la:</p>
+                <p>Adresă: Str. Crizantemelor, Dragomirești-Deal</p>
+                <p>Telefon: 0744 824 123</p>
+                <p style = "margin-bottom: 100px">Email: official.servexpert@gmail.com</p>
+                <form method="post" id="ContactForm" class="feedbackForm">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" id = "butonform">Trimite</button>
+                    <p id="error-message" style="color:red;"></p>
+                </form>
+
+            </div>
+    
+            
+        </div>
+    </section>
+
+        <!-- In main.html, inside the body -->
+    {% for message in messages %}
+    <div id="success-message" style="display: block; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #4CAF50; color: white; padding: 20px; border-radius: 5px; z-index: 1000;">
+        <p>{{ message }}</p>
+        <button id="close-success-message">Închide</button>
+    </div>
+    {% endfor %}
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('close-success-message').addEventListener('click', function() {
+            document.getElementById('success-message').style.display = 'none';
+        });
+    });
+    </script>
+
+
+    <footer>
+        <p>
+        <img src="/static/images/logo.jpg" style="float: center; height: 60px; width: 60px;" alt="Servexpert Logo">
+        &copy; 2024 Servexpert SRL. Toate drepturile rezervate.</p>
+        
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
+
+{% endblock %}
